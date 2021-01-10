@@ -53,3 +53,19 @@
 #footer p {
   margin: 0;
 }
+.toast{
+  margin: 10px 0;
+  text-align: center;
+}
+
+.toast .notice{
+  background-color: lightseagreen;
+  color: #fff;
+  padding: 10px;
+}
+
+.toast .alert {
+  background-color: darkorange;
+  color: #fff;
+  padding: 10px;
+}

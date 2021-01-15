@@ -4,19 +4,23 @@
       <div class="content">
         <div class="user-about">
           <div class="image">
-            <%= image_tag "5D4_1292.jpg" %>
+            <% if post.user.image.attached? %>
+              <%= image_tag post.user.image %>
+            <% else %>
+              <%= image_tag "user.png" %>
+            <% end %>
           </div>
           <div class="profile">
             <div class="name-history">
               <div class="name">
-                ガラガラ
+                <%= post.user.name %>
               </div>
               <div class="learning-history">
-                学習歴: 半年
+                <%= "学習歴： #{post.user.learning_history}年" %>
               </div>
             </div> 
             <div class="purpose">
-              目的：  学んで転職活動するぞー！
+              <%= "目的： #{post.user.purpose}" %>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -9,6 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    return
     @post = Post.new
   end
   
@@ -27,7 +29,8 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       redirect_to root_path, notice: "投稿を更新しました"
-    else render :edit
+    else 
+      render :edit
     end
   end
 
@@ -50,6 +53,4 @@ class PostsController < ApplicationController
   def find_post
     @post = Post.find(params[:id])
   end
-
-
 end

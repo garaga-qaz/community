@@ -18,6 +18,8 @@
               <div class="learning-history">
                 <%= "学習歴： #{post.user.learning_history}年" %>
               </div>
+              <%= link_to '削除', post_path(post.id), method: :delete, class: "nnn" %>
+              <%= link_to '編集', edit_post_path(post.id), method: :get, class: "up" %>
             </div> 
             <div class="purpose">
               <%= "目的： #{post.user.purpose}" %>

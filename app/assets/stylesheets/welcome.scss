@@ -18,7 +18,6 @@ img {
       border: 2px solid #000;
       padding: 20px;
       width: 60%;
-
       .content {
         border: 2px solid #000;
         padding: 15px;
@@ -35,7 +34,7 @@ img {
               width: 100%;
               display: flex;
               margin-bottom: 15px;
-  
+              position: relative;
               .name {
                 font-weight: bold;
               }
@@ -43,6 +42,30 @@ img {
               .learning-history {
                 margin-left: 20px;
               }
+            }
+            .name-history:hover .nnn {
+              display: inline;
+            }
+            .name-history:hover .up {
+              display: inline;
+            }
+            .nnn {
+              display: none;
+              padding: 2px;
+              color: aliceblue;
+              border-radius: 5px;
+              background-color:red;
+              margin-left: 5px;
+              font-size: 13px;
+            }
+            .up {
+              margin-left: 5px;
+              display: none;
+              padding: 2px;
+              color: aliceblue;
+              border-radius: 5px;
+              background-color:blue;
+              font-size: 13px;
             }
             .purpose {
               width: 100%;
